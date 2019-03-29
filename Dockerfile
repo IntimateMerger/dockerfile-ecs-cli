@@ -1,6 +1,6 @@
-FROM docker:18.03.0-ce
+FROM docker:18.06.2-ce 
 
-LABEL maintainer "mats116 <mats.kazuki@gmail.com>"
+LABEL maintainer "im-tech <tech@intimatemerger.com>"
 
 RUN apk add --no-cache \
         git \
@@ -15,5 +15,5 @@ RUN apk add --no-cache \
     ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws && \
     rm -rf ./awscli-bundle && \
     # ecs-cli
-    curl -o /usr/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-v1.4.2 && \
+    curl -o /usr/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-v1.12.1 && \
     chmod +x /usr/bin/ecs-cli
